@@ -1,0 +1,11 @@
+- name: Install ntpd
+  apt: pkg=openntpd state=installed
+
+- name: Install openntpd config
+  template: src=ntpd.conf dest=/etc/openntpd/ntpd.conf
+  notify: restart openntpd
+
+- name: Install openntpd defaults
+  copy: src=openntpd-default dest=/etc/default/openntpd
+  notify: restart openntpd
+

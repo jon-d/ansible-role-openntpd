@@ -1,0 +1,10 @@
+ansible-role-openntpd
+=====================
+
+This ansible role install and configure openntpd.
+
+
+Configuration
+-------------
+
+openntpd_ntp_servers: ntp servers list.
